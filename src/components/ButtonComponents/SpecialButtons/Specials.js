@@ -3,7 +3,7 @@ import React from "react";
 import SpecialButton from "./SpecialButton"; //import any components needed
 import { specials } from "../../../data"; //Import your array data to from the provided data file
 
-const Specials = () => {
+const Specials = (props) => {
   // STEP 2 - add the imported data to state
   console.log(specials)
   return (
@@ -12,7 +12,7 @@ const Specials = () => {
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
       {specials.map((item, index) => {
-        return <SpecialButton key={`${item}-${index}`} specialButton={item} />
+        return <SpecialButton key={`${item}-${index}`} special={item} display={props.display} setDisplay={props.setDisplay}/>
       })}
     </div>
   );
