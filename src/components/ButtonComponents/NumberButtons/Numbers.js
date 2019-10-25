@@ -3,7 +3,7 @@ import React from "react";
 import NumberButton from "./NumberButton"; //import any components needed 
 import { numbers } from "../../../data"; //Import your array data to from the provided data file
 
-const Numbers = () => {
+const Numbers = (props) => {
   // STEP 2 - add the imported data to state
   console.log(numbers)
   return (
@@ -12,7 +12,7 @@ const Numbers = () => {
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
        {numbers.map((item, index) => {
-         return <NumberButton key={`${item}-${index}`} numberButton={item}/>
+         return <NumberButton key={`${item}-${index}`} number={item} display={props.display} setDisplay={props.setDisplay}/>
        })}
     </div>
   );
