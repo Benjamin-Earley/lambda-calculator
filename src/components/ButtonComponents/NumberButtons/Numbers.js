@@ -12,7 +12,7 @@ const Numbers = () => {
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
        {numbers.map((item, index) => {
-         return <NumberButton key={`${item}-${index}`} num={item}/>
+         return <NumberButton key={`${item}-${index}`} numberButton={item}/>
        })}
     </div>
   );
