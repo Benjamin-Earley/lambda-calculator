@@ -5,11 +5,14 @@ const NumberButton = (props) => {
     <>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
       <button
-        onClick={() => props.setDisplay(
-          props.display === 0 ? props.number
-            :
-          `${props.display}${props.number}`
-      )}> {props.number}</button>
+          onClick={() => props.setDisplay(
+            props.display === 0 ? props.number
+              :
+            `${props.display}${props.number}`
+          )
+      }> 
+        {props.number}
+      </button>
     </>
   );
 };

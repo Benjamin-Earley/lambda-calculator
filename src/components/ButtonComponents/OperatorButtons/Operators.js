@@ -3,7 +3,7 @@ import React from "react";
 import OperatorButton from "./OperatorButton"; //import any components needed
 import { operators } from "../../../data"; //Import your array data to from the provided data file
 
-const Operators = () => {
+const Operators = (props) => {
   // STEP 2 - add the imported data to state
   console.log(operators)
   return (
@@ -12,7 +12,7 @@ const Operators = () => {
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
        {operators.map((item, index) => {
-         return <OperatorButton key={`${item.char}-${index}`} operatorButton={item.value} />
+         return <OperatorButton key={`${item.char}-${index}`} operator={item} display={props.display} setDisplay={props.setDisplay}/>
        })}
     </div>
   );
